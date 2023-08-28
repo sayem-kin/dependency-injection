@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a bean of class MyClass -->
+    <bean id="player" class="com.mottakin.xml_based_dependency_injection.Player">
+        <!-- Setter injection for a property -->
+
+        <property name="name" value="Shakib Al Hasan"> </property>
+        <property name="team" value="Bangladesh"> </property>
+        <property name="sponsor" ref="sponsorOne"> </property>
+    </bean>
+    <bean id="sponsorOne" class="com.mottakin.xml_based_dependency_injection.Sponsor">
+        <!-- Setter injection for a property -->
+        <property name="sponsorName" value="Rakuten"> </property>
+    </bean>
+
+</beans>
